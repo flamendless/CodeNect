@@ -1,0 +1,140 @@
+\flushleft
+\textbf{Scope and Limitations of the Study}\\
+\justifying
+\parx
+The study focuses on the development of a CodeNect: Visual Programming Software
+for learning the fundamentals of programming. The software will prioritize
+simple and basic functionalities over numerous features for the purpose of
+learning and education.
+
+The software is to be developed in Linux operating system using the Haxe programming
+language, Vim as code editor, terminal for building, Kha and the zui framework for
+rendering.
+The source is to be released as open-source with appropriate license to improve
+contributions. Since the software is stand-alone desktop program, there will be no
+account management. The software is only accessible by a single user such as the
+student or instructor.
+The software fully works in offline mode.
+
+The software is designed with seven core modules: Visual Nodes Module,
+Filesystem Module, Input and Output Module, Debug Module, Simulation Module,
+Transpiler Module, and Assessment Module.
+
+\flushleft
+\textbf{\textit{Visual Nodes Module}}\\
+\justifying
+\parx
+Nodes are graphical elements that serve as the building blocks of the software.
+Nodes can be used as a variable, logic, and conditionals. The properties of the node
+are internal randomly generated UUID (Universally Unique Identifier), position,
+size, and type. The fields of the node that are visible to the users, which can be
+modified, are name, and value(s). Each node has input socket(s) and output pins
+which are used for the flow of logic and redirection of data. The visibility of the
+sockets and pins of a node is dependent on its type.  For example, nodes that are
+constant variables will only enable the output socket as it is read-only, while
+regular variable nodes allow for both sockets.  Nodes are connected to one another
+through the use of wires. This relation of nodes is called the node graph. The flow
+of logic is easily determined using the wires with directional arrows signifying the
+direction of the logic.
+
+\flushleft
+\textbf{\textit{Filesystem Module}}\\
+\justifying
+\parx
+This module serves as the interface between the software and the user's machine for
+handling files. The module have four main functionalities, creation, modification,
+reading of files, and backup. One feature of the software that benefits from this
+module is the importation of exercises from package format file which allows for
+more learning materials that greatly increases the possible usage of the software.
+
+\parx
+When a user starts a new project, a template project structure with base files are
+created by the module and is saved into the user's machine. The modules assure that
+the project is stored with proper permission and in safe location. Modification such
+as addition or deletion is also handled by the module. The reading of files and
+project functionality takes into consideration the validity and safeness of the file
+and handles if the file is corrupted. The backup functionality regularly makes
+a backup of file in case of emergency such as program crash or user-side accident.
+
+\flushleft
+\textbf{\textit{Input and Output Module}}\\
+\justifying
+\parx
+This module captures user input events such as key press, mouse movement, mouse
+click, and so on. The module is responsible for processing and responding events and
+performing actions based on the event. This ensures that the interaction between the
+user and the software provides rich experience in terms of usability and learning.
+
+\parx
+This module handles output to the user. File, displays, views, and screens are examples
+of the possible types of output. The module manages everything that is rendered to the
+screen for the user to see such as the elements, the visual graph, a combination of the
+visual nodes connected to each other, the assessment files or reports, and the
+simulation view.
+
+\flushleft
+\textbf{\textit{Debug Module}}\\
+\justifying
+\parx
+This module will linter and give feedback and indication to the user whenever there
+is an attempt to perform an action that is faulty in logic. For example, the red
+color means error or danger while the yellow color means warning. The color based
+feedback and highlight is used in combination with useful messages giving more
+detailed information regarding the fault. These are placed accordingly to the source
+of the fault, whether in the node or in the wire. Runtime errors or warnings during
+the simulation stage is propagated to the user with detailed information and
+explanations about the probable cause of error and displays tips in debugging and
+fixing the program.
+
+\flushleft
+\textbf{\textit{Simulation Module}}\\
+\justifying
+\parx
+The process of simulation involves the compiling, building, and running the visual
+code is executed by this module. The compilation stage involves going from the main
+node which is the entry point of the program followed by the importing of libraries
+and packages (depending on the target language).  After that is the declaration of
+variables and methods and will continue to parse and convert the visual code to its
+equivalent source code.
+
+\parx
+The compilation stage is followed by the building, also known as linking stage.
+During this stage, the compiled source code is linked with the necessary libraries
+required by the target programming language. Examples of this are Dynamic Linking
+Libraries (.dll) and Shared Objects (.so) files.
+
+\parx
+After the compilation and building stage is the simulation or execution stage.  This
+executes the program and run it with additional features enabled to allow a more
+dynamic and intuitive interaction between the user and the program.
+
+\flushleft
+\textbf{\textit{Transpiler Module}}\\
+\justifying
+\parx
+This module transpiles the visual code made by the user into source code in target
+programming language. This module tests that the transpiled source code compiles
+and runs correctly as well. This allows for learners to see and compare their
+work into other programming languages which is part of the education curriculum.
+This serves as helper for their transition from learning the fundamentals of
+programming into its application towards programming languages that are more
+robust, high quality, and industry-standard.
+
+\flushleft
+\textbf{\textit{Assessment Module}}\\
+\justifying
+\parx
+The functionality of providing exercises designed for the learning of topics and
+concepts in programming and evaluation of the results are handled by the Assessment
+Module. The possible types of exercise range from output-based program to writing
+an algorithm that has memory and time limitation and complexity. The module can
+store the evaluated performances or grades of the user for further analyzation
+and can provide basic reports such as determining what concepts do most students
+find it difficult to learn within a set of time.
+
+\parx
+The software is limited to simulating text-based or command/terminal prompts as the
+priority is learning the fundamentals of programming. The software does not also
+compete as an Integrated Development Environment (IDE). The software does not provide
+networking functionalities such as connection to the internet to send or fetch data.
+There is also no access level or account management for the user.\\

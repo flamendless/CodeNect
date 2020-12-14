@@ -1,0 +1,55 @@
+# Revision 1 - Wednesday, 09 December, 2020
+
+(Adviser, Mr. James Angelo Aves)
+- [X] Change adviser name
+- [X] Change "Figure" to "Appendix Figure"
+- [X] Methodology - use future tense
+- [X] Format
+- [X] Fishbone Diagrams should reflect SoP
+
+(TC, Ms. Anabelle Almarez)
+- [X] Remove "Background of the Study" section title
+- [X] Format: Arial 11, A4 Paper
+- [X] Increase tab size
+- [X] BGS
+  - [X] remove "Background of the Study"
+  - [X] lessen paragraph
+  - [X] last paragraph must transition/introduce the main problem
+- [X]  SoP
+  - [X] 1 paragraph to discuss the problems, may cite survey/journals
+  - [X] Include survey results
+  - [X] Prob #2 - cite reasons for "outdated tools", mention examples
+- [X] TPS - end date - May
+- [X] OotS - thesis title in general objective
+- [X] SLS
+  - [X] 1 paragraph indicating what SW/Platforms to be used
+  - [X] open-source
+  - [X] users
+  - [X] levels of access
+- [X] DoT - +IDE, +CodeNect, 1 line statement per word
+- [X]  SotS
+  - [X] remove bold, put in statement.
+  - [X] direct beneficiaries
+  - [X] tech. companies (i.e CEIT)
+  - [X] developers/researchers (us)
+- [X] Methodlogy
+  - [X] Materials - development and deployment
+  - [X] last process should be evaluation
+- [X] "References" (centered)
+- [X] Add table of contents
+- [X] Add table of figures
+- [X] Add table of appendices
+- [X] RRL
+  - [X] 2 statements/sentences in introductory paragraph
+  - [X] Haxe first
+  - [X] Cite format (cite)(.)
+  - [X] V-Model discussion
+  - [X] + evaluation to be used
+  - [X] Related Literature (use thesis/article/journal title)
+- [X] Conceptual Framework
+  - [X] Figure (.), centered, single space
+  - [X] cite context diagram
+  - [X] software/hardware inputs - development and deployment
+  - [X] knowledge inputs - match the RL in chapter 2
+  - [X] process - bulleted points, not sentences
+- [X] Add graphical results of survey in Appendices
