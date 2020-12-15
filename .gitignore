@@ -1,3 +1,11 @@
 *.aux
 *.log
 *.out
+*.appf
+*.bbl
+*.bcf
+*.blg
+*.lof
+*.xml
+*.gz
+*.toc

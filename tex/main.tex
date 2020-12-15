@@ -12,11 +12,23 @@
 \usepackage{multicol}
 \usepackage[hidelinks]{hyperref}
 \usepackage[scaled]{helvet}
-\renewcommand\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
-\usepackage{tocloft}
 \usepackage{fancyhdr}
 \usepackage[labelsep=period]{caption}
+\usepackage{titlesec}
+\usepackage{tocloft}
+% \usepackage{showkeys}
+
+\fontfamily{phv}\selectfont
+
+\newcommand{\thesistitle}{
+	CodeNect: Visual Programming Software for\\
+	Learning Fundamentals of\\
+	Programming}
+
+\newcommand{\thesisautors}{
+	\textbf{Lim-it, Brandon B.,}\\
+	\textbf{Punay, Jaykel O.}\\}
 
 \captionsetup{justification=centering}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -27,10 +39,10 @@
 	\renewcommand{\footrulewidth}{0pt}
 }
 
-\newcommand{\listappendicesname}{}
-\newlistof{appendices}{apc}{\listappendicesname}
-\newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
-\newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
+% \newcommand{\listappendicesname}{}
+% \newlistof{appendices}{apc}{\listappendicesname}
+% \newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
+% \newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
 
 % \newcommand\listappendixname{\center{\normalsize\textbf{LIST OF APPENDICES}}}
 % \newcommand\appcaption[1]{
@@ -39,14 +51,14 @@
 % \newcommand\listofappendices{
 % 	\subsection*{\listappendixname}\@starttoc{app}}
 % \makeatother
-
-\newcommand\listappendixfigname{\center{\normalsize\textbf{LIST OF APPENDIX FIGURES}}}
-\newcommand\appfigcaption[1]{
-	\addcontentsline{app}{subsection}{#1}}
-\makeatletter
-\newcommand\listofappendixfigures{
-	\subsection*{\listappendixfigname}\@starttoc{app}}
-\makeatother
+%
+% \newcommand\listappendixfigname{\center{\normalsize\textbf{LIST OF APPENDIX FIGURES}}}
+% \newcommand\appfigcaption[1]{
+% 	\addcontentsline{app}{subsection}{#1}}
+% \makeatletter
+% \newcommand\listofappendixfigures{
+% 	\subsection*{\listappendixfigname}\@starttoc{app}}
+% \makeatother
 
 \renewcommand*\familydefault{\sfdefault}
 \addbibresource{bibliography.bib}
@@ -61,18 +73,27 @@
 	bmargin=1in,
 }
 
-% \renewcommand{\figurename}{Fig.}
-
 \newcommand{\parx}{
 	\setlength{\parindent}{4em}
 	\par}
 
-\newcommand{\appendixdata}[2]{
+\newcommand{\listappfigname}{}
+\newlistof{appfig}{appf}{\listappfigname}
+\newcommand{\appfig}[1]{
+	\refstepcounter{appfig}
+	\par\noindent\normalsize{Appendix Figure \theappfig. #1}
+	\addcontentsline{appf}{appfig}
+	{\protect#1}\par
+	% {\protect\numberline{\thesection.\theappfig} #1}\par
+	% {\protect\numberline{\theappfig} #1}\par
+}
+
+\newcommand{\appendixdata}[1]{
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.8\textwidth]{figures/results/#1.png}
-		\caption{#2}
-		\label{fig:dataresults#1}
+		% \caption{dataresults#1}
+		% \label{fig:dataresults#1}
 	\end{figure}
 }
 
@@ -84,65 +105,87 @@
 	\end{figure}
 }
 
-\newcommand{\thesistitle}{
-	CodeNect: Visual Programming Software for\\
-	Learning Fundamentals of\\
-	Programming}
+\newcommand{\listappname}{}
+\newlistof{app}{appp}{\listappname}
+\newcommand{\app}[1]{
+	\refstepcounter{app}
+	% \par\noindent\normalsize{Appendix \theapp. #1}
+	\addcontentsline{appp}{app}
+	{\protect#1}\par
+	% {\protect\numberline{\thesection.\theappfig} #1}\par
+	% {\protect\numberline{\theappfig} #1}\par
+}
 
-\newcommand{\thesisautors}{
-	\textbf{Lim-it, Brandon B.,}\\
-	\textbf{Punay, Jaykel O.}\\}
+\titleformat{\section}{\center{\normalfont\normalsize\bfseries}}{}{0pt}{}
+\titleformat{\subsection}{\center{\normalfont\normalsize\bfseries}}{}{0pt}{}
+
+\newcommand{\fakesection}[1]{
+	\par\refstepcounter{section}
+	\sectionmark{#1}
+	\addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}
+}
+
+\newcommand{\fakesubsection}[1]{
+	\par\refstepcounter{subsection}
+	\subsectionmark{#1}
+	\addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#1}
+}
 
 \begin{document}
 	\input{sections/title}
 
-	\newpage
+	\clearpage
 	\renewcommand{\contentsname}{\hfill\normalfont\normalsize \textbf{TABLE OF CONTENTS}\hfill}
 	\renewcommand{\cftaftertoctitle}{\hfill}
-	\addtocontents{toc}{~\hfill\textbf{Page}\par}
+
 	\pagenumbering{roman}
-	\addcontentsline{toc}{section}{ABSTRACT}
 	\tableofcontents
 
-	\newpage
+	\clearpage
+	\fakesection{LIST OF FIGURES}
 	\renewcommand{\listfigurename}{\hfill\normalfont\normalsize \textbf{LIST OF FIGURES}\hfill}
-	\addcontentsline{toc}{section}{LIST OF FIGURES}
 	\addtocontents{lof}{~\textbf{Figure}\hfill\textbf{Page}\par}
 	\pagenumbering{arabic}
 	\listoffigures
 
-	\newpage
-	\thispagestyle{empty}
-	\addcontentsline{toc}{section}{LIST OF APPENDIX FIGURES}
+	\clearpage
+	\begin{center}
+		\section{\textbf{LIST OF APPENDIX FIGURES}}
+	\end{center}
 	\pagenumbering{arabic}
-	\listofappendixfigures
+	\listofappfig
 
-	\newpage
-	\thispagestyle{empty}
-	\section*{\center{\normalsize\textbf{LIST OF APPENDICES}}}
-	\addcontentsline{toc}{section}{LIST OF APPENDICES}
+	\clearpage
+	\begin{center}
+		\section{\textbf{LIST OF APPENDICES}}
+	\end{center}
 	\pagenumbering{arabic}
-	\listofappendices
+	\listofapp
 
-	\newpage
+	% \newpage
+	% \thispagestyle{empty}
+	% \section*{\center{\normalsize\textbf{LIST OF APPENDICES}}}
+	% \addcontentsline{toc}{section}{LIST OF APPENDICES}
+	% \pagenumbering{arabic}
+	% \listofappendices
+
+	\clearpage
 	\pagenumbering{arabic}
-	\addcontentsline{toc}{section}{INTRODUCTION}
 	\input{sections/chapter1}
 
-	\newpage
-	\addcontentsline{toc}{section}{REVIEW OF RELATED LITERATURE}
+	\clearpage
 	\input{sections/chapter2}
 
-	\addcontentsline{toc}{section}{METHODOLOGY}
+	\clearpage
 	\input{sections/chapter3}
 
-	\newpage
+	\clearpage
 	\begin{doublespace}
-		\addcontentsline{toc}{section}{REFERENCES}
+		\fakesection{REFERENCES}
 		\printbibliography[title={\center{REFERENCES}}]
 	\end{doublespace}
 
-  \newpage
-	\addcontentsline{toc}{section}{APPENDICES}
+  \clearpage
+	\fakesection{APPENDICES}
   \input{sections/appendices}
 \end{document}
