@@ -17,7 +17,7 @@
 \usepackage[labelsep=period]{caption}
 \usepackage{titlesec}
 \usepackage{tocloft}
-% \usepackage{showkeys}
+\usepackage{titletoc}
 
 \fontfamily{phv}\selectfont
 
@@ -56,15 +56,19 @@
 	\setlength{\parindent}{4em}
 	\par}
 
-\newcommand{\listappfigname}{}
+\newcommand{\listappfigname}{
+	\normalsize\textbf{LIST OF APPENDIX FIGURES}\par
+	\flushleft\textbf{Appendix}\\
+	\textbf{Figure}\hfill\textbf{Page}
+}
 \newlistof{appfig}{appf}{\listappfigname}
 \newcommand{\appfig}[1]{
 	\refstepcounter{appfig}
-	\par\noindent\normalsize{Appendix Figure \theappfig. #1}
+	\par\noindent\normalsize{\theappfig. #1}
 	\addcontentsline{appf}{appfig}
-	{\protect#1}\par
+	% {\protect#1}\par
 	% {\protect\numberline{\thesection.\theappfig} #1}\par
-	% {\protect\numberline{\theappfig} #1}\par
+	{\protect\numberline{\theappfig} #1}\par
 }
 
 \newcommand{\appendixdata}[1]{
@@ -84,15 +88,17 @@
 	\end{figure}
 }
 
-\newcommand{\listappname}{}
+\newcommand{\listappname}{
+	\normalsize\textbf{LIST OF APPENDICES}\par
+	\textbf{Appendix}\hfill\textbf{Page}
+}
 \newlistof{app}{appp}{\listappname}
 \newcommand{\app}[1]{
 	\refstepcounter{app}
-	% \par\noindent\normalsize{Appendix \theapp. #1}
+	\par\noindent\normalsize{Appendix \theapp. #1}
 	\addcontentsline{appp}{app}
-	{\protect#1}\par
-	% {\protect\numberline{\thesection.\theappfig} #1}\par
-	% {\protect\numberline{\theappfig} #1}\par
+	% {\protect#1}\par
+	{\protect\numberline{\theapp} #1}\par
 }
 
 \titleformat{\section}{\center{\normalfont\normalsize\bfseries}}{}{0pt}{}
@@ -118,35 +124,38 @@
 	\renewcommand{\cftaftertoctitle}{\hfill}
 
 	\pagenumbering{roman}
+	\setlength{\cftbeforesecskip}{12pt}
+	\setlength{\cftbeforesubsecskip}{12pt}
+	\renewcommand{\thesection}{}
+	\renewcommand{\thesubsection}{}
 	\tableofcontents
 
 	\clearpage
-	\fakesection{LIST OF FIGURES}
+	\fakesection{\textbf{LIST OF FIGURES}}
 	\renewcommand{\listfigurename}{\hfill\normalfont\normalsize \textbf{LIST OF FIGURES}\hfill}
 	\addtocontents{lof}{~\textbf{Figure}\hfill\textbf{Page}\par}
 	\pagenumbering{arabic}
+	\doublespacing
 	\listoffigures
+	\singlespacing
 
 	\clearpage
-	\begin{center}
-		\section{\textbf{LIST OF APPENDIX FIGURES}}
-	\end{center}
+	\fakesection{\textbf{LIST OF APPENDIX FIGURES}}
 	\pagenumbering{arabic}
-	\listofappfig
+	\begin{center}
+		\doublespacing
+		\listofappfig
+		\singlespacing
+	\end{center}
 
 	\clearpage
-	\begin{center}
-		\section{\textbf{LIST OF APPENDICES}}
-	\end{center}
+	\fakesection{\textbf{LIST OF APPENDICES}}
 	\pagenumbering{arabic}
-	\listofapp
-
-	% \newpage
-	% \thispagestyle{empty}
-	% \section*{\center{\normalsize\textbf{LIST OF APPENDICES}}}
-	% \addcontentsline{toc}{section}{LIST OF APPENDICES}
-	% \pagenumbering{arabic}
-	% \listofappendices
+	\begin{center}
+		\doublespacing
+		\listofapp
+		\singlespacing
+	\end{center}
 
 	\clearpage
 	\pagenumbering{arabic}
@@ -160,7 +169,7 @@
 
 	\clearpage
 	\begin{doublespace}
-		\fakesection{REFERENCES}
+		\fakesection{\textbf{REFERENCES}}
 		\printbibliography[title={\center{REFERENCES}}]
 	\end{doublespace}
 
