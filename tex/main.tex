@@ -7,7 +7,7 @@
 \usepackage{setspace}
 \usepackage{geometry}
 \usepackage{mathptmx}
-\usepackage{graphicx}
+\usepackage{rotating, graphicx}
 \usepackage{float}
 \usepackage{multicol}
 \usepackage[hidelinks]{hyperref}
@@ -38,27 +38,6 @@
 	\renewcommand{\headrulewidth}{0pt}
 	\renewcommand{\footrulewidth}{0pt}
 }
-
-% \newcommand{\listappendicesname}{}
-% \newlistof{appendices}{apc}{\listappendicesname}
-% \newcommand{\appendices}[1]{\addcontentsline{apc}{appendices}{#1}}
-% \newcommand{\newappendix}[1]{\section*{#1}\appendices{#1}}
-
-% \newcommand\listappendixname{\center{\normalsize\textbf{LIST OF APPENDICES}}}
-% \newcommand\appcaption[1]{
-% 	\addcontentsline{app}{subsection}{#1}}
-% \makeatletter
-% \newcommand\listofappendices{
-% 	\subsection*{\listappendixname}\@starttoc{app}}
-% \makeatother
-%
-% \newcommand\listappendixfigname{\center{\normalsize\textbf{LIST OF APPENDIX FIGURES}}}
-% \newcommand\appfigcaption[1]{
-% 	\addcontentsline{app}{subsection}{#1}}
-% \makeatletter
-% \newcommand\listofappendixfigures{
-% 	\subsection*{\listappendixfigname}\@starttoc{app}}
-% \makeatother
 
 \renewcommand*\familydefault{\sfdefault}
 \addbibresource{bibliography.bib}
@@ -186,6 +165,8 @@
 	\end{doublespace}
 
   \clearpage
-	\fakesection{APPENDICES}
+	\begin{center}
+		\section{\textbf{APPENDIX FIGURES}}
+	\end{center}
   \input{sections/appendices}
 \end{document}
