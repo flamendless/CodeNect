@@ -26,16 +26,16 @@ Transpiler Module, and Assessment Module.
 \parx
 Nodes are graphical elements that serve as the building blocks of the software.
 Nodes can be used as a variable, logic, and conditionals. The properties of the node
-are internal randomly generated UUID (Universally Unique Identifier), position,
-size, and type. The fields of the node that are visible to the users, which can be
-modified, are name, and value(s). Each node has input socket(s) and output pins
-which are used for the flow of logic and redirection of data. The visibility of the
-sockets and pins of a node is dependent on its type.  For example, nodes that are
-constant variables will only enable the output socket as it is read-only, while
-regular variable nodes allow for both sockets.  Nodes are connected to one another
-through the use of wires. This relation of nodes is called the node graph. The flow
-of logic is easily determined using the wires with directional arrows signifying the
-direction of the logic.
+are position, size, and type. The fields of the node that are visible to the
+users, which can be modified, are name, and value(s). Each node has input
+socket(s) and output pins which are used for the flow of logic and redirection
+of data. The visibility of the sockets and pins of a node is dependent on its
+type.  For example, nodes that are constant variables will only enable the
+output socket as it is read-only, while regular variable nodes allow for both
+sockets.  Nodes are connected to one another through the use of wires. This
+relation of nodes is called the node graph. The flow of logic is easily
+determined using the wires with directional arrows signifying the direction of
+the logic.
 
 \flushleft
 \textbf{\textit{Filesystem Module}}\\
@@ -118,7 +118,13 @@ and runs correctly as well. This allows for learners to see and compare their
 work into other programming languages which is part of the education curriculum.
 This serves as helper for their transition from learning the fundamentals of
 programming into its application towards programming languages that are more
-robust, high quality, and industry-standard.
+robust, high quality, and industry-standard. The module will walk through each
+nodes provided by the Visual Nodes Module and will parse each to create a tree
+structure that will be read and converted by the module into the selected
+programming language by the user.  Since this module is reponsible for the
+conversion of each visual data into their corresponding textual data, this
+module also evaluates the parsed tree structure in order to check and interpret
+expressions in programming.
 
 \flushleft
 \textbf{\textit{Assessment Module}}\\
