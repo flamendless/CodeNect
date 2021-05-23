@@ -97,10 +97,12 @@
 \newlistof{app}{appp}{\listappname}
 \newcommand{\app}[1]{
 	\refstepcounter{app}
-	\par\noindent\normalsize{Appendix \theapp. #1}
+	% \par\noindent\normalsize{Appendix \theapp. #1}
+	\par\noindent\normalsize{Appendix \Alph{app}. #1}
 	\addcontentsline{appp}{app}
 	% {\protect#1}\par
-	{\protect\numberline{\theapp} #1}\par
+	% {\protect\numberline{\theapp} #1}\par
+	{\protect\numberline{\Alph{app}} #1}\par
 }
 
 \titleformat{\section}{\center{\normalfont\normalsize\bfseries}}{}{0pt}{}
