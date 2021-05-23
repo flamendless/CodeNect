@@ -14,3 +14,4 @@ tllocalmgr packages:
 * footmisc
 * titlesec
 * tocloft
+* multirow
