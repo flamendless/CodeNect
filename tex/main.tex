@@ -26,9 +26,9 @@
 \fontfamily{phv}\selectfont
 
 \newcommand{\thesistitle}{
-	CodeNect: Visual Programming Software for\\
-	Learning Fundamentals of\\
-	Programming}
+	CODENECT: VISUAL PROGRAMMING SOFTWARE FOR\\
+	LEARNING FUNDAMENTALS OF\\
+	PROGRAMMING}
 
 \newcommand{\thesisautors}{
 	\textbf{Lim-it, Brandon B.,}\\
@@ -103,8 +103,8 @@
 	\par\noindent\normalsize{Appendix \Alph{app}. #1}
 	\addcontentsline{appp}{app}
 	% {\protect#1}\par
-	% {\protect\numberline{\theapp} #1}\par
-	{\protect\numberline{\Alph{app}} #1}\par
+	{\protect\numberline{\theapp} #1}\par
+	% {\protect\numberline{\Alph{app}} #1}\par
 }
 
 \titleformat{\section}{\center{\normalfont\normalsize\bfseries}}{}{0pt}{}
@@ -178,6 +178,7 @@
 
 	\clearpage
 	\fakesection{\textbf{LIST OF TABLES}}
+	\renewcommand{\listtablename}{LIST OF TABLES}
 	\addtocontents{lot}{~\textbf{Table}\hfill\textbf{Page}\par}
 	\pagenumbering{roman}
 	\setcounter{page}{8}
@@ -209,14 +210,19 @@
 	\input{sections/chapter1}
 
 	\clearpage
+	\thispagestyle{empty}
 	\input{sections/chapter2}
 
 	\clearpage
+	\thispagestyle{empty}
 	\input{sections/chapter3}
 
 	\clearpage
+	\thispagestyle{empty}
 	\input{sections/chapter4}
 
+	\clearpage
+	\thispagestyle{empty}
 	\input{sections/chapter5}
 
 	\clearpage

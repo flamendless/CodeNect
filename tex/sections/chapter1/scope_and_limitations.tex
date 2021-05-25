@@ -5,7 +5,11 @@
 The study focuses on the development of a CodeNect: Visual Programming Software
 for learning the fundamentals of programming. The software will prioritize
 simple and basic functionalities over numerous features for the purpose of
-learning and education.
+learning and education. The software is designed for beginner programmers who
+can be students or non-students. The software can also serve as teaching and
+supplementary aid tool by instructors for their class. The software has no
+field of access as anyone with the program can use it. No requirements of
+Internet connection or account.
 
 The software is to be developed in Linux operating system using the C++ programming
 language, Vim as code editor, terminal for building, OpenGL and GLFW framework for
@@ -16,12 +20,12 @@ account management. The software is only accessible by a single user such as the
 student or instructor.
 The software fully works in offline mode.
 
-The software is designed with seven core modules: Visual Nodes Module,
-Filesystem Module, Input and Output Module, Debug Module, Simulation Module,
-Transpiler Module, and Assessment Module.
+The software is designed with seven core modules: visual nodes module,
+filesystem module, input and output module, debug module, simulation module,
+transpiler module, and assessment module.
 
 \flushleft
-\textbf{\textit{Visual Nodes Module}}\\
+\textbf{\parx{Visual Nodes Module}}\\
 \justifying
 \parx
 Nodes are graphical elements that serve as the building blocks of the software.
@@ -38,7 +42,7 @@ determined using the wires with directional arrows signifying the direction of
 the logic.
 
 \flushleft
-\textbf{\textit{Filesystem Module}}\\
+\textbf{\parx{Filesystem Module}}\\
 \justifying
 \parx
 This module serves as the interface between the software and the user's machine for
@@ -57,7 +61,7 @@ and handles if the file is corrupted. The backup functionality regularly makes
 a backup of file in case of emergency such as program crash or user-side accident.
 
 \flushleft
-\textbf{\textit{Input and Output Module}}\\
+\textbf{\parx{Input and Output Module}}\\
 \justifying
 \parx
 This module captures user input events such as key press, mouse movement, mouse
@@ -73,7 +77,7 @@ visual nodes connected to each other, the assessment files or reports, and the
 simulation view.
 
 \flushleft
-\textbf{\textit{Debug Module}}\\
+\textbf{\parx{Debug Module}}\\
 \justifying
 \parx
 This module will linter and give feedback and indication to the user whenever there
@@ -87,13 +91,13 @@ explanations about the probable cause of error and displays tips in debugging an
 fixing the program.
 
 \flushleft
-\textbf{\textit{Simulation Module}}\\
+\textbf{\parx{Simulation Module}}\\
 \justifying
 \parx
 The process of simulation involves the compiling, building, and running the visual
 code is executed by this module. The compilation stage involves going from the main
 node which is the entry point of the program followed by the importing of libraries
-and packages (depending on the target language).  After that is the declaration of
+and packages (depending on the target language). After that is the declaration of
 variables and methods and will continue to parse and convert the visual code to its
 equivalent source code.
 
@@ -109,13 +113,13 @@ executes the program and run it with additional features enabled to allow a more
 dynamic and intuitive interaction between the user and the program.
 
 \flushleft
-\textbf{\textit{Transpiler Module}}\\
+\textbf{\parx{Transpiler Module}}\\
 \justifying
 \parx
 This module transpiles the visual code made by the user into source code in target
 programming language. This module tests that the transpiled source code compiles
 and runs correctly as well. This allows for learners to see and compare their
-work into other programming languages which is part of the education curriculum.
+work into the C programming language which is part of the education curriculum.
 This serves as helper for their transition from learning the fundamentals of
 programming into its application towards programming languages that are more
 robust, high quality, and industry-standard. The module will walk through each
@@ -127,16 +131,15 @@ module also evaluates the parsed tree structure in order to check and interpret
 expressions in programming.
 
 \flushleft
-\textbf{\textit{Assessment Module}}\\
+\textbf{\parx{Assessment Module}}\\
 \justifying
 \parx
 The functionality of providing exercises designed for the learning of topics and
 concepts in programming and evaluation of the results are handled by the Assessment
 Module. The possible types of exercise range from output-based program to writing
 an algorithm that has memory and time limitation and complexity. The module can
-store the evaluated performances or grades of the user for further analyzation
-and can provide basic reports such as determining what concepts do most students
-find it difficult to learn within a set of time.
+compare the submitted code output with the expected output of the assessment line
+by line and show to the user which lines are correct or incorrect.
 
 \parx
 The software is limited to simulating text-based or command/terminal prompts as the
