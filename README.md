@@ -15,3 +15,4 @@ tllocalmgr packages:
 * titlesec
 * tocloft
 * multirow
+* textpos
